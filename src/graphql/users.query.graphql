@@ -6,3 +6,11 @@ query GetUsers {
         }
     }
 }
+
+query GetMessages {
+    messages {
+        id
+        body
+        createdAt
+    }
+}

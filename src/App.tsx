@@ -1,11 +1,14 @@
 import UserDisplay from "./components/UserDisplay.tsx";
 import { useQuery } from 'urql'
-import { GetUsersDocument } from './graphql/generated'
+import {GetMessagesDocument, GetUsersDocument} from './graphql/generated'
 
 
 function App() {
     const [results] = useQuery({
         query: GetUsersDocument
+    })
+    const [messages] = useQuery({
+        query: GetMessagesDocument
     })
 
     return (
